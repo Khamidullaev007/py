@@ -1,0 +1,32 @@
+from tkinter import *
+from tkinter.ttk import *
+
+from time import strftime
+
+root = Tk()
+root.title("Clock")
+
+def time():
+    string = strftime('%H:%M:%S:%p'), 
+    label.config(text=string)
+    label.after(1000, time)
+
+label = Label(root, font=("ds-digital", 80), background = "white", foreground = "black")
+label.pack(anchor='center')
+time()
+
+mainloop()
+
+# condition = True
+
+# x = 1 if condition else 0
+
+# print(x)
+
+
+# num1 = 10_000_000_000
+# num2 = 100_000_000
+
+# total = num1 + num2
+
+# print(total)
